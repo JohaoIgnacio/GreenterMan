@@ -1,0 +1,276 @@
+{
+	"info": {
+		"_postman_id": "4280b244-a76d-459d-9e89-4446014eabca",
+		"name": "companies",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "42879100"
+	},
+	"item": [
+		{
+			"name": "index",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vZ3JlZW50ZXIudGVzdC9hcGkvbG9naW4iLCJpYXQiOjE3NDE5MTE1NTIsImV4cCI6MTc0MTkxNTE1MiwibmJmIjoxNzQxOTExNTUyLCJqdGkiOiI0ODRReHM2eDZNcE1MelBzIiwic3ViIjoiMiIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.RAKW3YzdDv_fIo8q1TnRXrYI0qCCATjfixsIAt2nTsc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://greenter.test/api/companies",
+					"protocol": "http",
+					"host": [
+						"greenter",
+						"test"
+					],
+					"path": [
+						"api",
+						"companies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "store",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vZ3JlZW50ZXIudGVzdC9hcGkvbG9naW4iLCJpYXQiOjE3NDE5MTA3MDQsImV4cCI6MTc0MTkxNDMwNCwibmJmIjoxNzQxOTEwNzA0LCJqdGkiOiJqblNNcURtMmpnY1Q4Uk9SIiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.SUAY6xxrMYAhD6hAeQZE3xyoJOfi9O_ogyThfP2Nis0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "razon_social",
+							"value": "JOHAO",
+							"type": "text"
+						},
+						{
+							"key": "ruc",
+							"value": "10724709171",
+							"type": "text"
+						},
+						{
+							"key": "direccion",
+							"value": "tu casa",
+							"type": "text"
+						},
+						{
+							"key": "sol_user",
+							"value": "prueba",
+							"type": "text"
+						},
+						{
+							"key": "sol_pass",
+							"value": "prueba",
+							"type": "text"
+						},
+						{
+							"key": "cert",
+							"type": "file",
+							"src": "/C:/Users/llont/Downloads/LLAMAPECERTIFICADODEMO34871324891_cert_out.pem"
+						},
+						{
+							"key": "logo",
+							"type": "file",
+							"src": "/C:/Users/llont/Pictures/Mantaro/logo.PNG"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://greenter.test/api/companies",
+					"protocol": "http",
+					"host": [
+						"greenter",
+						"test"
+					],
+					"path": [
+						"api",
+						"companies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "show",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vZ3JlZW50ZXIudGVzdC9hcGkvbG9naW4iLCJpYXQiOjE3NDE5MTEyNDcsImV4cCI6MTc0MTkxNDg0NywibmJmIjoxNzQxOTExMjQ3LCJqdGkiOiJSdXpzRnhrOHIzaFdidHhOIiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ._VYhqkwLF0gjtY5MrXBTkIBv9B4mX440RVrA72XaRCE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://greenter.test/api/companies/20123456789",
+					"protocol": "http",
+					"host": [
+						"greenter",
+						"test"
+					],
+					"path": [
+						"api",
+						"companies",
+						"20123456789"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vZ3JlZW50ZXIudGVzdC9hcGkvbG9naW4iLCJpYXQiOjE3NDE5MTA3MDQsImV4cCI6MTc0MTkxNDMwNCwibmJmIjoxNzQxOTEwNzA0LCJqdGkiOiJqblNNcURtMmpnY1Q4Uk9SIiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.SUAY6xxrMYAhD6hAeQZE3xyoJOfi9O_ogyThfP2Nis0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "razon_social",
+							"value": "Mantaro Systems ",
+							"type": "text"
+						},
+						{
+							"key": "ruc",
+							"value": "20123456789",
+							"type": "text"
+						},
+						{
+							"key": "direccion",
+							"value": "Puertas del Sol Galilea\n",
+							"type": "text"
+						},
+						{
+							"key": "sol_user",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "sol_pass",
+							"value": "asassad",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://greenter.test/api/companies/20123456789",
+					"protocol": "http",
+					"host": [
+						"greenter",
+						"test"
+					],
+					"path": [
+						"api",
+						"companies",
+						"20123456789"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "destroy",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vZ3JlZW50ZXIudGVzdC9hcGkvbG9naW4iLCJpYXQiOjE3NDE5MTE1NTIsImV4cCI6MTc0MTkxNTE1MiwibmJmIjoxNzQxOTExNTUyLCJqdGkiOiI0ODRReHM2eDZNcE1MelBzIiwic3ViIjoiMiIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.RAKW3YzdDv_fIo8q1TnRXrYI0qCCATjfixsIAt2nTsc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://greenter.test/api/companies/20123456789",
+					"protocol": "http",
+					"host": [
+						"greenter",
+						"test"
+					],
+					"path": [
+						"api",
+						"companies",
+						"20123456789"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

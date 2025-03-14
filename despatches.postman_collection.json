@@ -1,0 +1,148 @@
+{
+	"info": {
+		"_postman_id": "484679ac-422b-496b-b04a-f4cae6a1d65e",
+		"name": "despatches",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "42879100"
+	},
+	"item": [
+		{
+			"name": "send",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vZ3JlZW50ZXIudGVzdC9hcGkvbG9naW4iLCJpYXQiOjE3NDE3NTU1NjgsImV4cCI6MTc0MTc1OTE2OSwibmJmIjoxNzQxNzU1NTY5LCJqdGkiOiJDZ1FWSjlaS0toNEJWVzVzIiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.QSituICgmWynbsA6EXiTPldIeDHUt1LC5sBkW5MEM44",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"version\": \"2022\",\r\n    \"tipoDoc\": \"09\",\r\n    \"serie\": \"T001\",\r\n    \"correlativo\": \"123\",\r\n    \"fechaEmision\": \"2025-03-08T00:00:00\",\r\n    \"tipDocAfectado\": \"01\",\r\n    \"numDocfectado\": \"F001-12\",\r\n    \"codMotivo\": \"01\",\r\n    \"desMotivo\": \"ANULACION DE LA OPERACION\",\r\n    \"formaPago\": {\r\n        \"moneda\": \"PEN\",\r\n        \"tipo\": \"Contado\"\r\n    },\r\n    \"tipoMoneda\": \"PEN\",\r\n    \"company\": {\r\n        \"ruc\": \"20000000200\",\r\n        \"razonSocial\": \"Mantaro Systems 2\",\r\n        \"nombreComercial\": \"Mantaro Systems\",\r\n        \"address\": {\r\n            \"ubigueo\": \"150101\",\r\n            \"departamento\": \"LIMA\",\r\n            \"provincia\": \"LIMA\",\r\n            \"distrito\": \"LIMA\",\r\n            \"urbanizacion\": \"-\",\r\n            \"direccion\": \"Av. Villa Nueva 221\",\r\n            \"codLocal\": \"0000\"\r\n        }\r\n    },\r\n    \"destinatario\": {\r\n        \"tipoDoc\": \"6\",\r\n        \"numDoc\": \"20000000100\",\r\n        \"rznSocial\": \"EMPRESA X\"\r\n    },\r\n    \"envio\": {\r\n        \"codTraslado\": \"01\",\r\n        \"modTraslado\": \"01\",\r\n        \"fecTraslado\": \"\",\r\n        \"pesoTotal\": 12.5,\r\n        \"undPesoTotal\": \"KGM\",\r\n        \"llegada\": {\r\n            \"ubigueo\": \"150203\",\r\n            \"direccion\": \"Calle Falsa 120\"\r\n        },\r\n        \"partida\": {\r\n            \"ubigueo\": \"150101\",\r\n            \"direccion\": \"Av. Villa Nueva 221\"\r\n        },\r\n        \"transportista\": {\r\n            \"tipoDoc\": \"6\",\r\n            \"numDoc\": \"20000000002\",\r\n            \"rznSocial\": \"Copa Piston SAC\",\r\n            \"nroMtc\": \"0001\"\r\n        }\r\n    },\r\n    \"details\": [\r\n        {\r\n            \"cantidad\": 2,\r\n            \"unidad\": \"ZZ\",\r\n            \"descripcion\": \"PRODUCTO 1\",\r\n            \"codigo\": \"P001\"\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://greenter.test/api/despatches/send",
+					"protocol": "http",
+					"host": [
+						"greenter",
+						"test"
+					],
+					"path": [
+						"api",
+						"despatches",
+						"send"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "pdf Copy",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vZ3JlZW50ZXIudGVzdC9hcGkvbG9naW4iLCJpYXQiOjE3NDE3NDY0MTEsImV4cCI6MTc0MTc1MDAxMSwibmJmIjoxNzQxNzQ2NDExLCJqdGkiOiJ3RTBSZHRYeVFRZDlYcExvIiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.NEmZvoc5soJZL9vdeYmCCFgGvD3JBk5Rur_E4pP5fNc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"ublVersion\": \"2.1\",\r\n    \"tipoDoc\": \"07\",\r\n    \"serie\": \"FC01\",\r\n    \"correlativo\": \"1\",\r\n    \"fechaEmision\": \"2025-03-08T00:00:00\",\r\n    \"tipDocAfectado\": \"01\",\r\n    \"numDocfectado\": \"F001-12\",\r\n    \"codMotivo\":\"01\",\r\n    \"desMotivo\":\"ANULACION DE LA OPERACION\",\r\n    \"formaPago\": {\r\n        \"moneda\": \"PEN\",\r\n        \"tipo\": \"Contado\"\r\n    },\r\n    \"tipoMoneda\": \"PEN\",\r\n    \"company\": {\r\n        \"ruc\": \"20000000200\",\r\n        \"razonSocial\": \"Mantaro Systems 2\",\r\n        \"nombreComercial\": \"Mantaro Systems\",\r\n        \"address\": {\r\n            \"ubigueo\": \"150101\",\r\n            \"departamento\": \"LIMA\",\r\n            \"provincia\": \"LIMA\",\r\n            \"distrito\": \"LIMA\",\r\n            \"urbanizacion\": \"-\",\r\n            \"direccion\": \"Av. Villa Nueva 221\",\r\n            \"codLocal\": \"0000\"\r\n        }\r\n    },\r\n    \"client\": {\r\n        \"tipoDoc\": \"6\",\r\n        \"numDoc\": \"20000000100\",\r\n        \"rznSocial\": \"EMPRESA X\"\r\n    },\r\n    \"details\": [\r\n        {\r\n            \"tipAfeIgv\": \"10\",\r\n            \"codProducto\": \"P001\",\r\n            \"unidad\": \"NIU\",\r\n            \"cantidad\": 2,\r\n            \"mtoValorUnitario\": 50,\r\n            \"descripcion\": \"PRODUCTO 1\",\r\n            \"mtoBaseIgv\": 100,\r\n            \"porcentajeIgv\": 18,\r\n            \"igv\": 18,\r\n            \"totalImpuestos\": 18,\r\n            \"mtoValorVenta\": 100,\r\n            \"mtoPrecioUnitario\": 59\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://greenter.test/api/notes/pdf",
+					"protocol": "http",
+					"host": [
+						"greenter",
+						"test"
+					],
+					"path": [
+						"api",
+						"notes",
+						"pdf"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "xml Copy",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vZ3JlZW50ZXIudGVzdC9hcGkvbG9naW4iLCJpYXQiOjE3NDE3NDY0MTEsImV4cCI6MTc0MTc1MDAxMSwibmJmIjoxNzQxNzQ2NDExLCJqdGkiOiJ3RTBSZHRYeVFRZDlYcExvIiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.NEmZvoc5soJZL9vdeYmCCFgGvD3JBk5Rur_E4pP5fNc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"ublVersion\": \"2.1\",\r\n    \"tipoDoc\": \"07\",\r\n    \"serie\": \"FC01\",\r\n    \"correlativo\": \"1\",\r\n    \"fechaEmision\": \"2025-03-08T00:00:00\",\r\n    \"tipDocAfectado\": \"01\",\r\n    \"numDocfectado\": \"F001-12\",\r\n    \"codMotivo\":\"01\",\r\n    \"desMotivo\":\"ANULACION DE LA OPERACION\",\r\n    \"formaPago\": {\r\n        \"moneda\": \"PEN\",\r\n        \"tipo\": \"Contado\"\r\n    },\r\n    \"tipoMoneda\": \"PEN\",\r\n    \"company\": {\r\n        \"ruc\": \"20000000200\",\r\n        \"razonSocial\": \"Mantaro Systems 2\",\r\n        \"nombreComercial\": \"Mantaro Systems\",\r\n        \"address\": {\r\n            \"ubigueo\": \"150101\",\r\n            \"departamento\": \"LIMA\",\r\n            \"provincia\": \"LIMA\",\r\n            \"distrito\": \"LIMA\",\r\n            \"urbanizacion\": \"-\",\r\n            \"direccion\": \"Av. Villa Nueva 221\",\r\n            \"codLocal\": \"0000\"\r\n        }\r\n    },\r\n    \"client\": {\r\n        \"tipoDoc\": \"6\",\r\n        \"numDoc\": \"20000000100\",\r\n        \"rznSocial\": \"EMPRESA X\"\r\n    },\r\n    \"details\": [\r\n        {\r\n            \"tipAfeIgv\": \"10\",\r\n            \"codProducto\": \"P001\",\r\n            \"unidad\": \"NIU\",\r\n            \"cantidad\": 2,\r\n            \"mtoValorUnitario\": 50,\r\n            \"descripcion\": \"PRODUCTO 1\",\r\n            \"mtoBaseIgv\": 100,\r\n            \"porcentajeIgv\": 18,\r\n            \"igv\": 18,\r\n            \"totalImpuestos\": 18,\r\n            \"mtoValorVenta\": 100,\r\n            \"mtoPrecioUnitario\": 59\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://greenter.test/api/notes/xml",
+					"protocol": "http",
+					"host": [
+						"greenter",
+						"test"
+					],
+					"path": [
+						"api",
+						"notes",
+						"xml"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
